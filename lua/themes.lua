@@ -1,3 +1,10 @@
+local ok, _ = pcall(vim.cmd, "colorscheme tokyonight")
+if not ok then
+    vim.cmd("colorscheme default")
+    print("Farbthema konnte nicht geladen werden, auf Standard gewechselt.")
+end
+
+--[[
 return {
   -- Original Synthwave84
   {
@@ -39,3 +46,4 @@ return {
     priority = 1000,
   }
 }
+]]--

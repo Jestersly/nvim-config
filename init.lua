@@ -1,9 +1,13 @@
--- Lade Basis-Konfigurationen
-require("config.options")
-require("config.lazy")
+-- Grundlegende Einstellungen laden
+require("options")
 
--- Lade und initialisiere Plugins
+-- Plugin-Manager Lazy.nvim laden
 require("lazy").setup("plugins")
 
--- Setze Standard-Theme
-vim.cmd([[colorscheme tokyonight]])
+-- Themes und Keybindings laden
+require("themes")
+require("keymaps")
+
+-- zusätzliche Voreinstellungen
+vim.cmd("colorscheme synthwave84")
+
